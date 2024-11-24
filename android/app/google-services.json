@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "187085004326",
+    "project_id": "reservit-c922a",
+    "storage_bucket": "reservit-c922a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187085004326:android:21eac54cdea600381cd0e7",
+        "android_client_info": {
+          "package_name": "com.example.reserv_it"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQD4fU5xas7zNzwL5Ib4vow9rVxZz1zgM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
