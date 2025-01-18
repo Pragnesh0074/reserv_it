@@ -18,7 +18,7 @@ class _OrderPlacePageState extends State<OrderPlacePage> {
   int nOt = 0;
 
   Future fetchRestroName() async {
-    await FirebaseDatabase.instance
+    FirebaseDatabase.instance
         .ref('ResDetails')
         .child(widget.bookingDetails['RestroId'])
         .child('Info')
@@ -89,7 +89,7 @@ class _OrderPlacePageState extends State<OrderPlacePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(0, 77, 55, 100),
+        backgroundColor: const Color.fromRGBO(0, 77, 55, 1),
         title: const Text('ReservIt'),
       ),
       body: Padding(

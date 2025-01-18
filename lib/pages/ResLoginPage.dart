@@ -118,7 +118,7 @@ class _ResLoginPageState extends State<ResLoginPage> {
           ],
         ),
       ),
-      backgroundColor: const Color.fromRGBO(0, 77, 55, 100),
+      backgroundColor: const Color.fromRGBO(0, 77, 55, 1),
     );
   }
 }

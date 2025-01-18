@@ -53,7 +53,7 @@ class _WelcomePageState extends State<WelcomePage> {
           )
         ],
       ),
-      backgroundColor: const Color.fromRGBO(0, 77, 55, 100),
+      backgroundColor: Color.fromRGBO(0, 77, 55, 1),
     );
   }
 }

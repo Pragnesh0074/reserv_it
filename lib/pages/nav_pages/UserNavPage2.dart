@@ -15,14 +15,14 @@ class _UserNavPage2State extends State<UserNavPage2> {
   var bookingList = [], restroIdList = [];
 
   Future fetchBookings() async {
-    await FirebaseDatabase.instance
+    FirebaseDatabase.instance
         .ref('Bookings')
         .child(FirebaseAuth.instance.currentUser!.uid.toString())
         .onValue
         .listen((event) async {
       for (DataSnapshot s in event.snapshot.children) {
         restroIdList.add(s.key.toString());
-        await FirebaseDatabase.instance
+        FirebaseDatabase.instance
             .ref('ResUser')
             .child(s.key.toString())
             .onValue

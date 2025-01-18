@@ -32,7 +32,7 @@ class _RestroPageState extends State<RestroPage> {
   int availTable = 0, totalTable = 0, bookedTable = 0;
 
   Future checkTable() async {
-    await resRef.onValue.listen((event) {
+    resRef.onValue.listen((event) {
       resRef
           .child(widget.restroId)
           .child('BookedTableDetails')
@@ -114,7 +114,7 @@ class _RestroPageState extends State<RestroPage> {
     });
     checkTable();
     if (result) {
-      return Container(
+      return SizedBox(
           width: double.maxFinite,
           child: const Center(
             child: Text(
@@ -123,7 +123,7 @@ class _RestroPageState extends State<RestroPage> {
             ),
           ));
     } else {
-      return Container(
+      return SizedBox(
         width: double.maxFinite,
         child: Column(
           children: [
@@ -228,7 +228,7 @@ class _RestroPageState extends State<RestroPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(0, 77, 55, 100),
+        backgroundColor: const Color.fromRGBO(0, 77, 55, 1),
         title: const Text('ReservIt'),
       ),
       body: SingleChildScrollView(
@@ -260,7 +260,7 @@ class _RestroPageState extends State<RestroPage> {
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
                       borderSide: const BorderSide(
-                          color: Color.fromRGBO(0, 77, 55, 100), width: 2),
+                          color: Color.fromRGBO(0, 77, 55, 1), width: 2),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     border: OutlineInputBorder(

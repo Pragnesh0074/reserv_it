@@ -139,7 +139,7 @@ class _SignUpPageState extends State<SignUpPage> {
           ],
         ),
       ),
-      backgroundColor: const Color.fromRGBO(0, 77, 55, 100),
+      backgroundColor: const Color.fromRGBO(0, 77, 55, 1),
     );
   }
 }

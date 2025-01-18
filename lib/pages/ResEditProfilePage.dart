@@ -124,7 +124,7 @@ class _ResEditprofilePageState extends State<ResEditprofilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: const Color.fromRGBO(0, 77, 55, 100),
+          backgroundColor: const Color.fromRGBO(0, 77, 55, 1),
           title: const Text('ReservIt')),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -272,7 +272,7 @@ class _ResEditprofilePageState extends State<ResEditprofilePage> {
                       height: 60,
                       width: 150,
                       decoration: const BoxDecoration(
-                          color: Color.fromRGBO(0, 77, 55, 100),
+                          color: Color.fromRGBO(0, 77, 55, 1),
                           borderRadius: BorderRadius.all(Radius.circular(10))),
                       child: const Center(
                           child: Text(

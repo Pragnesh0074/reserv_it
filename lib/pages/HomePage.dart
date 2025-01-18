@@ -5,7 +5,6 @@ import 'package:reserv_it/utils/FirebaseUtils.dart';
 
 import 'nav_pages/UserNavPage3.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -22,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(0, 77, 55, 100),
+        backgroundColor: const Color.fromRGBO(0, 77, 55, 1),
         title: const Text('ReservIt'),
       ),
       body: Center(
@@ -35,7 +34,7 @@ class _HomePageState extends State<HomePage> {
               currIndex = value;
             });
           },
-          backgroundColor: const Color.fromRGBO(0, 77, 55, 100),
+          backgroundColor: const Color.fromRGBO(0, 77, 55, 1),
           selectedItemColor: Colors.white,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),

@@ -12,6 +12,7 @@ void main() async {
   runApp(const MyApp());
 }
 
+
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
@@ -25,7 +26,7 @@ class _MyAppState extends State<MyApp> {
 
   Future checkUser() async {
     if (FirebaseAuth.instance.currentUser != null) {
-      await FirebaseDatabase.instance.ref('ResUser').onValue.listen((event) {
+      FirebaseDatabase.instance.ref('ResUser').onValue.listen((event) {
         if (event.snapshot
             .hasChild(FirebaseAuth.instance.currentUser!.uid.toString())) {
           isResUser = true;
@@ -45,7 +46,6 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     checkUser();
   }

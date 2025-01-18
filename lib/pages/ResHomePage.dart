@@ -16,7 +16,7 @@ class _ResHomePageState extends State<ResHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(0, 77, 55, 100),
+        backgroundColor: const Color.fromRGBO(0, 77, 55, 1),
         title: const Text('ReservIt'),
       ),
       body: Center(
@@ -29,7 +29,7 @@ class _ResHomePageState extends State<ResHomePage> {
               currIndex = value;
             });
           },
-          backgroundColor: const Color.fromRGBO(0, 77, 55, 100),
+          backgroundColor: const Color.fromRGBO(0, 77, 55, 1),
           selectedItemColor: Colors.white,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),

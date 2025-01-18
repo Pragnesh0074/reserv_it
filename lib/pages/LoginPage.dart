@@ -143,7 +143,7 @@ class _LoginPageState extends State<LoginPage> {
           ],
         ),
       ),
-      backgroundColor: const Color.fromRGBO(0, 77, 55, 100),
+      backgroundColor: const Color.fromRGBO(0, 77, 55, 1),
     );
   }
 }

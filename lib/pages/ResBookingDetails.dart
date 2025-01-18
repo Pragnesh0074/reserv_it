@@ -17,7 +17,7 @@ class _ResBookingDetailsState extends State<ResBookingDetails> {
   String userName = '', tableType = '', date = '', time = '';
   int nOt = 0;
   Future fetchDetails() async {
-    await FirebaseDatabase.instance
+    FirebaseDatabase.instance
         .ref('ResDetails')
         .child(FirebaseAuth.instance.currentUser!.uid.toString())
         .child('BookingDetails')
@@ -71,7 +71,7 @@ class _ResBookingDetailsState extends State<ResBookingDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(0, 77, 55, 100),
+        backgroundColor: const Color.fromRGBO(0, 77, 55, 1),
         title: const Text('ReservIt'),
       ),
       body: Padding(

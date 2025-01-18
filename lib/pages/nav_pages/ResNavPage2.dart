@@ -30,6 +30,7 @@ class _ResNavPage2State extends State<ResNavPage2> {
     });
   }
 
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();

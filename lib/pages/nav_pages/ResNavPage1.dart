@@ -15,7 +15,7 @@ class _ResNavPage1State extends State<ResNavPage1> {
   var bookingList = [], userIdList = [];
 
   Future fetchBookingList() async {
-    await FirebaseDatabase.instance
+    FirebaseDatabase.instance
         .ref('ResDetails')
         .child(FirebaseAuth.instance.currentUser!.uid.toString())
         .child('BookingDetails')
@@ -23,7 +23,7 @@ class _ResNavPage1State extends State<ResNavPage1> {
         .listen((event) async {
       for (DataSnapshot s in event.snapshot.children) {
         userIdList.add(s.key.toString());
-        await FirebaseDatabase.instance
+        FirebaseDatabase.instance
             .ref('UserDetails')
             .child(s.key.toString())
             .child('Info')

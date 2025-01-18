@@ -16,40 +16,39 @@ class _UserEditProfilePageState extends State<UserEditProfilePage> {
   TextEditingController name_controller = TextEditingController();
 
   Future<void> addDetails() async {
-    if(name_controller.text.toString() == "") {
+    if (name_controller.text.toString() == "") {
       Fluttertoast.showToast(
-        msg: "Please Fill All Details...",
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.CENTER,
-        timeInSecForIosWeb: 1,
-        textColor: Colors.white,
-        fontSize: 16.0);
-    }
-    else {
-      await FirebaseDatabase.instance
-        .ref("UserDetails")
-        .child(FirebaseAuth.instance.currentUser!.uid.toString())
-        .child('Info')
-        .set({
-      'Name': name_controller.text.toString(),
-    });
-    Fluttertoast.showToast(
-        msg: "Detail Added Successfully...",
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.CENTER,
-        timeInSecForIosWeb: 1,
-        textColor: Colors.white,
-        fontSize: 16.0);
-    if (Navigator.canPop(context)) {
-      Navigator.pop(context);
+          msg: "Please Fill All Details...",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.CENTER,
+          timeInSecForIosWeb: 1,
+          textColor: Colors.white,
+          fontSize: 16.0);
     } else {
-      SystemNavigator.pop();
-    }
+      await FirebaseDatabase.instance
+          .ref("UserDetails")
+          .child(FirebaseAuth.instance.currentUser!.uid.toString())
+          .child('Info')
+          .set({
+        'Name': name_controller.text.toString(),
+      });
+      Fluttertoast.showToast(
+          msg: "Detail Added Successfully...",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.CENTER,
+          timeInSecForIosWeb: 1,
+          textColor: Colors.white,
+          fontSize: 16.0);
+      if (Navigator.canPop(context)) {
+        Navigator.pop(context);
+      } else {
+        SystemNavigator.pop();
+      }
     }
   }
 
   Future fetchDetails() async {
-    await FirebaseDatabase.instance.ref("UserDetails").onValue.listen((event) {
+    FirebaseDatabase.instance.ref("UserDetails").onValue.listen((event) {
       if (event.snapshot
           .hasChild(FirebaseAuth.instance.currentUser!.uid.toString())) {
         name = event.snapshot
@@ -74,7 +73,7 @@ class _UserEditProfilePageState extends State<UserEditProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: const Color.fromRGBO(0, 77, 55, 100),
+          backgroundColor: const Color.fromRGBO(0, 77, 55, 1),
           title: const Text('ReservIt')),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -138,7 +137,7 @@ class _UserEditProfilePageState extends State<UserEditProfilePage> {
                       height: 60,
                       width: 150,
                       decoration: const BoxDecoration(
-                          color: Color.fromRGBO(0, 77, 55, 100),
+                          color: Color.fromRGBO(0, 77, 55, 1),
                           borderRadius: BorderRadius.all(Radius.circular(10))),
                       child: const Center(
                           child: Text(

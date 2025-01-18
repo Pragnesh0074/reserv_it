@@ -50,7 +50,7 @@ class _AddEditTabelPageState extends State<AddEditTabelPage> {
   }
 
   Future fetchDetails() async {
-    await FirebaseDatabase.instance
+    FirebaseDatabase.instance
         .ref("ResDetails")
         .child(FirebaseAuth.instance.currentUser!.uid.toString())
         .onValue
@@ -77,7 +77,7 @@ class _AddEditTabelPageState extends State<AddEditTabelPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(0, 77, 55, 100),
+        backgroundColor: const Color.fromRGBO(0, 77, 55, 1),
         title: const Text('ReservIt'),
       ),
       // ignore: prefer_const_constructors
@@ -147,7 +147,7 @@ class _AddEditTabelPageState extends State<AddEditTabelPage> {
                   height: 60,
                   width: 150,
                   decoration: const BoxDecoration(
-                      color: Color.fromRGBO(0, 77, 55, 100),
+                      color: Color.fromRGBO(0, 77, 55, 1),
                       borderRadius: BorderRadius.all(Radius.circular(10))),
                   child: const Center(
                       child: Text(

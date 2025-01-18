@@ -18,7 +18,7 @@ class _OrderDetailsState extends State<OrderDetails> {
   int nOt = 0;
 
   Future fetchRestroName() async {
-    await FirebaseDatabase.instance
+    FirebaseDatabase.instance
         .ref('ResDetails')
         .child(widget.restroId)
         .child('Info')
@@ -30,7 +30,7 @@ class _OrderDetailsState extends State<OrderDetails> {
   }
 
   Future fetchDetails() async {
-    await FirebaseDatabase.instance
+    FirebaseDatabase.instance
         .ref('Bookings')
         .child(FirebaseAuth.instance.currentUser!.uid.toString())
         .child(widget.restroId)
@@ -82,7 +82,7 @@ class _OrderDetailsState extends State<OrderDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(0, 77, 55, 100),
+        backgroundColor: const Color.fromRGBO(0, 77, 55, 1),
         title: const Text('ReservIt'),
       ),
       body: Padding(
